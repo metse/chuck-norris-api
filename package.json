@@ -1,0 +1,29 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Chuck Norris Api",
+  "main": "index.js",
+  "repository": "https://github.com/metse/chuck-norris-api.git",
+  "author": "Metse",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development ts-node-dev --respawn --pretty --transpile-only src/server.ts"
+  },
+  "dependencies": {
+    "@koa/cors": "3.1.0",
+    "cross-env": "^7.0.3",
+    "koa": "2.13.1",
+    "koa-helmet": "6.0.0",
+    "ts-node-dev": "1.1.6"
+  },
+  "devDependencies": {
+    "@types/dotenv": "8.2.0",
+    "@types/helmet": "4.0.0",
+    "@types/koa": "2.13.0",
+    "@types/koa-helmet": "6.0.2",
+    "@types/koa__cors": "3.0.2",
+    "@types/node": "14.14.31",
+    "typescript": "4.2.2"
+  }
+}
