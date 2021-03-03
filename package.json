@@ -12,9 +12,12 @@
   },
   "dependencies": {
     "@koa/cors": "3.1.0",
-    "cross-env": "^7.0.3",
+    "apollo-server-koa": "2.21.0",
+    "cross-env": "7.0.3",
+    "graphql": "15.5.0",
     "koa": "2.13.1",
     "koa-helmet": "6.0.0",
+    "node-fetch": "2.6.1",
     "ts-node-dev": "1.1.6"
   },
   "devDependencies": {
