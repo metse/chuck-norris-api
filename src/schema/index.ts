@@ -14,7 +14,7 @@ const schema = gql`
 
   type Query {
     categories: [Category]
-    random(category: String): Joke
+    random(category: String!): Joke
   }
 `;
 

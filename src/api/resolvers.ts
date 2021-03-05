@@ -1,15 +1,19 @@
-import Actions from "../transactional/actions";
+import ChuckNorrisService from "../transactional/chuck-norris-service";
 
-const actions = new Actions();
+const chuckNorrisService = new ChuckNorrisService();
+
+interface Category {
+  category: string
+};
 
 const resolvers = {
   Query: {
     categories: async () => {
-      const categories = await actions.getCategories();
+      const categories = await chuckNorrisService.fetchAll();
       return categories.data;
     },
-    random: async (category: string) => {
-      const joke = await actions.getRandomJoke(category);
+    random: async (context: any, params: Category) => {
+      const joke = await chuckNorrisService.fetchRandom(params.category);
       return joke.data;
     }
   }

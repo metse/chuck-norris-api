@@ -2,8 +2,8 @@ import fetch from 'node-fetch';
 import config from '../config';
 import Response from '../utils/responses';
 
-class Actions {
-  async getCategories(): Promise<Response> {
+class ChuckNorrisService {
+  async fetchAll(): Promise<Response> {
     const response = await fetch(`${config.baseUrl}/jokes/categories`);
 
     if (response.status === 200) {
@@ -15,7 +15,7 @@ class Actions {
     return new Response([], response.status);
   }
 
-  async getRandomJoke(category: string): Promise<Response> {
+  async fetchRandom(category: string): Promise<Response> {
     const response = await fetch(`${config.baseUrl}/jokes/random?category=${category}`);
 
     if (response.status === 200) {
@@ -23,8 +23,8 @@ class Actions {
       return new Response(data, response.status);
     }
 
-    return new Response('Failed to retrieve error message', response.status);
+    return new Response('Failed to retrieve random message', response.status);
   }
 }
 
-export default Actions;
+export default ChuckNorrisService;
