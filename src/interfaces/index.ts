@@ -1,4 +1,4 @@
-export interface Joke {
+export interface Fact {
   iconUrl: string
   id: string
   url: string

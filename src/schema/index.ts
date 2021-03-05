@@ -5,7 +5,7 @@ const schema = gql`
     name: String
   }
 
-  type Joke {
+  type Fact {
     iconUrl: String
     id: String
     url: String
@@ -14,7 +14,7 @@ const schema = gql`
 
   type Query {
     categories: [Category]
-    random(category: String!): Joke
+    random(category: String!): Fact
   }
 `;
 

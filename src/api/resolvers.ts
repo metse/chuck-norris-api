@@ -13,8 +13,8 @@ const resolvers = {
       return categories.data;
     },
     random: async (context: any, params: Category) => {
-      const joke = await chuckNorrisService.fetchRandom(params.category);
-      return joke.data;
+      const fact = await chuckNorrisService.fetchRandom(params.category);
+      return fact.data;
     }
   }
 };
